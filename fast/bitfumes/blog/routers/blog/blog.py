@@ -16,8 +16,7 @@ router = APIRouter(tags=["blogs"], prefix="/blog")
 
 
 @router.get('/', response_model=list[ShowBlog])
-def get_blogs(db: Session = Depends(get_db), get_current_user: schemas.UserSchema = Depends(get_current_user)):
-
+def get_blogs(db: Session = Depends(get_db), c: schemas.UserSchema = Depends(get_current_user)):
     blogs = crud_blog.get_blogs(db)
     return blogs
 

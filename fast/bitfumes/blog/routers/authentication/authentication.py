@@ -15,9 +15,8 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
 @router.post('/')
-def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    print(login)
-    user: schemas.UserSchema = db.query(models.User).filter(models.User.email == request.username).first()
+def login(request: schemas.UserSchema, db: Session = Depends(get_db)):
+    user: schemas.UserSchema = db.query(models.User).filter(models.User.email == request.email).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Invalid Credentials")
     if not hashing.verify_password(request.password, user.password):
