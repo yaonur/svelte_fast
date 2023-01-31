@@ -7,6 +7,7 @@ DB_URL = os.getenv("DB_URL_POSTGRES")
 engine = create_engine(DB_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
+console.log('')
 
 
 def get_db():
