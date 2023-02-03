@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    --transition-slow: all 0.5s ease;
+    --primary-color: #dbd8e3;
+    --primary-background:  #352f44;
+    --navbar-background:#2a2438;
+    --navbar-icon:#dbd8e3;
+    color:var(--primary-color);
+}

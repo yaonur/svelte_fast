@@ -10,3 +10,29 @@ def create_user(db: Session, request: UserBaseSchema):
     db.commit()
     db.refresh(new_user)
     return new_user
+
+
+def get_all_users(db: Session):
+    return db.query(DbUser).all()
+
+
+def get_user(db: Session, user_name: str):
+    return db.query(DbUser).filter(DbUser.username == user_name).first()
+
+
+def update_user(db: Session, user_name: str, request: UserBaseSchema):
+    user = db.query(DbUser).filter(DbUser.username == user_name)
+    user.update({
+        DbUser.username: request.username,
+        DbUser.email: request.email,
+        DbUser.password: Hash.bcrypt(request.password)
+    })
+    db.commit()
+    return 'ok'
+
+
+def delete_user(db: Session, user_name):
+    user = db.query(DbUser).filter(DbUser.username == user_name)
+    user.delete()
+    db.commit()
+    return 'ok'
