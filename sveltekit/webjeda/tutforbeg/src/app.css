@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    --navbar-background: #252424;
+    --background-primary: #3a4148;
+    --color-primary: #f5f4f4;
+    --color-primary-hover: #295200;
+    --color-hero-background: #3d793d;
+}
+body{
+    background-color: var(--background-primary);
+}
+.container{
+    max-width:1000px;
+    margin:0 auto;
+}
