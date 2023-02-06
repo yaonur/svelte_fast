@@ -24,6 +24,10 @@
         {
             title: 'Profile',
             href: '/profile'
+        },
+       {
+            title: 'Login',
+            href: '/login'
         }
     ];
 
