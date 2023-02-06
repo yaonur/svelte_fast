@@ -1,9 +1,19 @@
 *{
     margin:0;
     padding:0;
-    --navbar-background: #252424;
+}
+:root{
+     --navbar-background: #252424;
     --background-primary: #3a4148;
     --color-primary: #f5f4f4;
+    --color-primary-hover: #295200;
+    --color-hero-background: #3d793d;
+
+}
+[data-theme="light"]{
+    --navbar-background: #948e8e;
+    --background-primary: #e6eaf3;
+    --color-primary: #000000;
     --color-primary-hover: #295200;
     --color-hero-background: #3d793d;
 }
