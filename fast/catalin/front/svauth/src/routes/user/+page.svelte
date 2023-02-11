@@ -1,5 +1,7 @@
 <script lang="ts">
-	let users:[]=null;
+	import { redirect } from '@sveltejs/kit';
+
+	let users: [] = null;
 	let username = 'string';
 	let password = 'string';
 	let token = '';
@@ -19,7 +21,7 @@
 		console.log(token);
 	};
 
-	async function get_users() {
+	const get_users = async () => {
 		// const token = get_token();
 		console.log('getting users');
 		const auth = `Bearer ${token}`;
@@ -32,6 +34,11 @@
 		const data = await response.json();
 		users = data;
 		console.log(users[0]);
+	};
+	if (token) {
+		get_users();
+	} else {
+		redirect(301, '/login');
 	}
 </script>
 

@@ -9,15 +9,15 @@ export const handle = async ({ event, resolve }) => {
     throw redirect(302, "/login");
   }
 		// const token = get_token();
-		console.log('getting users');
-  console.log(access)
-		const auth = access.value;
-		console.log(auth);
-		console.log('-----------------------');
-		const user =  fetch('http://127.0.0.1:8000/user', {
-			method: 'GET',
-			headers: { Authorization: auth }
-		});
+	// 	console.log('getting users');
+  // console.log(access)
+	// 	const auth = access.value;
+	// 	console.log(auth);
+	// 	console.log('-----------------------');
+	// 	const user =  fetch('http://127.0.0.1:8000/user', {
+	// 		method: 'GET',
+	// 		headers: { Authorization: auth }
+	// 	});
 
   const response = await resolve(event);
   return response;
