@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .sidebar-icon{
+        @apply relative flex items-center justify-center h-8 w-8 mt-2 mb-2 mx-auto bg-gray-800 text-green-500
+        hover:bg-green-600 hover:text-white hover:rounded-xl transition duration-300 ease-linear;
+    }
+}
+:root{
+    --buttonBgColor: #e56441;
+    --buttonTextColor: #696161;
+    --linear:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.1));
+    --textColor: #e56441;
+}
