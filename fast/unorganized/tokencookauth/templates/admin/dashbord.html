@@ -1,0 +1,86 @@
+{% extends "admin/base.html" %}
+
+
+
+{% block content %}
+<div>
+
+    <div class="flex">
+        <div class="slider">
+            <div>
+                <img width="300" src="{{ url_for('static', path = '/img/profile1.jpg') }}">
+            </div>
+
+            <div class="flex-colum p-5">
+
+                <div class="flex-column">
+                    <div class="btn-active mb-2" href="http://">
+                        Home
+                    </div>
+
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/analytics.png" width="20" height="20">
+                        <span class="ml-10">Analytical</span>
+                    </a>
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/innovation.png" width="20" height="20">
+                        <span class="ml-10">Modern</span>
+                    </a>
+                </div>
+
+                <div class="flex-column">
+                    <div class="btn-active mb-2" href="http://">
+                        Event
+                    </div>
+
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/new.png" width="20" height="20">
+                        <span class="ml-10">create</span>
+                    </a>
+
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/show.png" width="20" height="20">
+                        <span class="ml-10">show</span>
+                    </a>
+                </div>
+
+                <div class="flex-column">
+                    <div class="btn-active mb-2" href="http://">
+                        Log
+                    </div>
+
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/log.png" width="20" height="20">
+                        <span class="ml-10">Analytical</span>
+                    </a>
+                </div>
+
+                <div class="flex-column">
+                    
+                    <div class="btn-active mb-2" href="http://">
+                        Sign out
+                    </div>
+
+                    <a class="btn mb-2" href="http://">
+                        <img src="/static/icon/loc.png" width="20" height="20">
+                        <span class="ml-10">logout</span>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- -------------- Container ---------------- -->
+
+        <div class="container">
+            <p>test</p>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- End container-fluid -->
+{% endblock %}
