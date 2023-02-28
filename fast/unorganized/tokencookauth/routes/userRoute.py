@@ -59,3 +59,8 @@ def login_for_access_token(response:Response,request:Request, db: Session = Depe
     response=RedirectResponse(url="/",status_code=status.HTTP_302_FOUND)
     response.set_cookie(key="access_token", value=f"Bearer {access_token}", max_age=3600)
     return response
+
+@route.get("/event")
+def get_event(request: Request,current_user: User=Depends(auth.get_current_user)):
+    print(current_user)
+    return templates.TemplateResponse("front/event.html", {"request": request})

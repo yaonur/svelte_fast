@@ -1,31 +1,17 @@
-<script>
-	import Button from './lib/Button.svelte';
+<script lang="ts">
+	import TodoList from './lib/TodoList.svelte';
+	import { v4 as uuid } from 'uuid';
+	import NavBar from './lib/NavBar.svelte';
+
+	const todos = [
+		{ id: uuid(), title: 'todo1', completed: true },
+		{ id: uuid(), title: 'todo2', completed: true },
+		{ id: uuid(), title: 'todo3', completed: true }
+	];
 </script>
 
-<Button shadow="true" on:click|once={() => alert(true)} disabled="true">Something</Button>
-<Button shadow="true">2. button</Button>
-<div>
-	<h1>Hey</h1>
-	<p>paragraph</p>
-</div>
 
-<button class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">...</button>
+	<TodoList {todos} />
 
 <style lang="postcss">
-	h1 {
-		display: flex;
-		justify-content: center;
-		color: black;
-		font-size: 2rem;
-		transition: transform 5s ease;
-
-		&:hover {
-			transform: rotate(2turn);
-		}
-	}
-
-	p {
-		background-color: #1a1a1a;
-		color: var(--textColor);
-	}
 </style>

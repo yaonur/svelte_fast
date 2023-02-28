@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify/icons-material-symbols': ^1.2.27
   '@iconify/svelte': ^3.1.0
+  '@picocss/pico': ^1.5.7
   '@sveltejs/vite-plugin-svelte': ^2.0.2
   '@tsconfig/svelte': ^3.0.0
+  '@types/uuid': ^9.0.1
   autoprefixer: ^10.4.13
   postcss: ^8.4.21
   postcss-import: ^15.1.0
@@ -21,13 +23,19 @@ specifiers:
   tailwindcss: ^3.2.6
   tslib: ^2.5.0
   typescript: ^4.9.3
+  uuid: ^9.0.0
   vite: ^4.1.0
+
+dependencies:
+  uuid: 9.0.0
 
 devDependencies:
   '@iconify/icons-material-symbols': 1.2.27
   '@iconify/svelte': 3.1.0_svelte@3.55.1
+  '@picocss/pico': 1.5.7
   '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.1.1
   '@tsconfig/svelte': 3.0.0
+  '@types/uuid': 9.0.1
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
   postcss-import: 15.1.0_postcss@8.4.21
@@ -563,6 +571,10 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@picocss/pico/1.5.7:
+    resolution: {integrity: sha512-RygdXNlSXieAs9jMw/AeqA1ki1kldgEYbRn8BnYZIPfRTM5NWZ4uVzMK6uMPhYlRjoT5wD/OplZvIefnCqyDCQ==}
+    dev: true
+
   /@sveltejs/vite-plugin-svelte/2.0.2_svelte@3.55.1+vite@4.1.1:
     resolution: {integrity: sha512-xCEan0/NNpQuL0l5aS42FjwQ6wwskdxC3pW1OeFtEKNZwRg7Evro9lac9HesGP6TdFsTv2xMes5ASQVKbCacxg==}
     engines: {node: ^14.18.0 || >= 16}
@@ -598,6 +610,10 @@ packages:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
       '@types/node': 18.13.0
+    dev: true
+
+  /@types/uuid/9.0.1:
+    resolution: {integrity: sha512-rFT3ak0/2trgvp4yYZo5iKFEPsET7vKydKF+VRCxlQ9bpheehyAJH89dAkaLEq/j/RZXJIqcgsmPJKUP1Z28HA==}
     dev: true
 
   /acorn-node/1.8.2:
@@ -2446,6 +2462,11 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
 
   /vite/4.1.1_sass@1.58.1:
     resolution: {integrity: sha512-LM9WWea8vsxhr782r9ntg+bhSFS06FJgCvvB0+8hf8UWtvaiDagKYWXndjfX6kGl74keHJUcpzrQliDXZlF5yg==}
