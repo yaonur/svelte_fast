@@ -3,11 +3,11 @@
 	import Solution from './Solution.svelte';
 </script>
 
-<div class="flex">
-	<div class="basis-1/2">
+<div class="flex gap-1">
+	<div class="basis-1/2 border">
 		<Exercise />
 	</div>
-	<div class="basis-1/2">
+	<div class="basis-1/2 border">
 		<Solution />
 	</div>
 </div>
