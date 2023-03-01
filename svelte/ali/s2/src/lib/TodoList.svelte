@@ -106,8 +106,13 @@
 			padding: 15px;
 			text-align: center;
 		}
+		.add-todo-form {
+			padding: 15px;
+			background-color: #303030;
+			display: flex;
+		}
 	}
-  .todo-list {
+	.todo-list {
 		max-height: 150px;
 		overflow: auto;
 		ul {
@@ -119,47 +124,42 @@
 				display: flex;
 				align-items: center;
 				background-color: #303030;
-        border-radius:5px;
-        padding:10px;
-        position:relative;
-        label{
-          cursor:pointer;
-          font-size:18px;
-          display:flex;
-          align-items:baseline;
-          padding-right: 20px;
-          input[type=checkbox]{
-            margin:0 10px 0 0;
-            cursor:pointer;
-          }
-        }
-        &.completed>label{
-          text-decoration:line-through;
-          color:#ccc;
-        }
-        .remove-todo-button {
-          border:none;
-          background:none;
-          padding:5px;
-          position:absolute;
-          right:10px;
-          cursor:pointer;
-          display:none;
-          :global(svg){
-            fill:#db1414;
-          }
-        }
-        &:hover{
-          .remove-todo-button{
-            display:block;
-          }
-        }
+				border-radius: 5px;
+				padding: 10px;
+				position: relative;
+				label {
+					cursor: pointer;
+					font-size: 18px;
+					display: flex;
+					align-items: baseline;
+					padding-right: 20px;
+					input[type='checkbox'] {
+						margin: 0 10px 0 0;
+						cursor: pointer;
+					}
+				}
+				&.completed > label {
+					text-decoration: line-through;
+					color: #ccc;
+				}
+				.remove-todo-button {
+					border: none;
+					background: none;
+					padding: 5px;
+					position: absolute;
+					right: 10px;
+					cursor: pointer;
+					display: none;
+					:global(svg) {
+						fill: #db1414;
+					}
+				}
+				&:hover {
+					.remove-todo-button {
+						display: block;
+					}
+				}
 			}
 		}
-    .add-todo-form{
-      padding:15px;
-      background-color:#303030;
-      display:flex;
-    }
 	}
 </style>
