@@ -1,0 +1,9 @@
+*{
+    margin:0;
+    padding:0;
+    --gap: 10px;
+}
+body{
+    background-color: #211e1e;
+    color: #fff;
+}
