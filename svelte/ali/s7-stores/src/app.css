@@ -1,0 +1,14 @@
+:root {
+  --buttonBgColor: #ff3e00;
+  --buttonTextColor: #fff;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
