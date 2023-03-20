@@ -1,0 +1,21 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "auth: FastAPI",
+			"type": "python",
+			"request": "launch",
+			"module": "uvicorn",
+			"cwd": "${workspaceFolder}/sveltekit/auth/backend",
+			"envFile": "${workspaceFolder}/sveltekit/auth/backend/.env",
+			"args": [
+				"main:app"
+			],
+			"jinja": true,
+			"justMyCode": true
+		}
+	]
+}
