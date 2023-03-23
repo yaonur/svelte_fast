@@ -1,7 +1,7 @@
 <nav>
 	<div>
 		<h1 class="font-bold uppercase p-4 border-b border-gray-100">
-			<a href="/">Food Ninja</a>
+			<a href="/" class="text-green-500 sm:text-blue-500">Food Ninja</a>
 		</h1>
 	</div>
 	<ul>
