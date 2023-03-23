@@ -1,2 +1,2 @@
 *.pyc
-sveltekit/auth/backend/.env
+.env
