@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { supabase } from '../../supabase';
+	import { supabase } from '../../lib/supabase';
     
     let email: string="ya_onur@hotmail.com";
     let password:string="123123"
@@ -9,14 +9,17 @@
 	const signIn = async () => {
 		const { data, error } = await supabase.auth.signUp({
             email,
-            password
+            password,
+            options:{
+                emailRedirectTo: "http://localhost:5173/admin"
+            }
 			
 		});
         if(error) {
             console.log(error);
         } else{
             console.log(data)
-            goto("/admin")
+            // goto("/admin")
         }
 	};
 

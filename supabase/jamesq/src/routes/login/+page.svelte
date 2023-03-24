@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { supabase } from '../../supabase';
+	import { supabase } from '../../lib/supabase';
 	import type { PageData } from './$types';
     
     let email: string="ya_onur@hotmail.com";
