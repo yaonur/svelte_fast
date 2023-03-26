@@ -5,24 +5,10 @@
   let password="123123"
   let user_id=""
 	// your script goes here
-  async function signUp() {
-    let { data, error } = await supabase.auth.signUp({
-  email: email,
-  password: password
-})
-  console.log (data)
-  console.log(error)
-}
-	async function signInWithEmail() {
-    let resp = await supabase.auth.signInWithPassword({
-  email: email,
-  password: password
-})
-  console.log (resp.data)
-}
+ 
 const getTodos = async () => {
   const { data, error } = await supabase
-    .from('firms')
+    .from('todos')
     .select('*')
   console.log(data)
   console.log(error)
@@ -38,10 +24,7 @@ if(data!.user){
 }
 </script>
 
-<input type="text" bind:value={email}>
-<input type="text" bind:value={password}>
-<button on:click={signInWithEmail}>Login</button>
-<button on:click={signUp}>SignUp</button>
+
 <button on:click={getTodos}>Get todos</button>
 <button on:click={logUser}>Log user</button>
 <br>
