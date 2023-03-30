@@ -10,7 +10,7 @@
   const scale = tweened(1, { duration: 500 });
 </script>
 
-<h1>Home</h1>
+<!-- <h1>Home</h1>
 <h2>Color:{$settings.colorScheme}</h2>
 {$location?.lat},{$location?.lon}
 <br />
@@ -28,7 +28,7 @@
 </button>
 <div
   style="width:100px;height:100px;background-color: purple;transform: scale({$scale});transform-origin:0 0;"
-/>
+/> -->
 
 <Form
   on:submit={(e) => {

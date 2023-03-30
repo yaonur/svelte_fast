@@ -21,9 +21,9 @@
   
 </script>
 
-<pre>
+<!-- <pre>
   {JSON.stringify($formStore, null, 2)}
-</pre>
+</pre> -->
 
 <form on:submit={handleSubmit}>
   <slot />
