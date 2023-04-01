@@ -1,14 +1,13 @@
-    <script>
-      import "../app.css";
-    </script>
-    <div>
-      <nav class="p-2">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/settings">Settings</a>
-      </nav>
-      <slot />
+<script>
+	import '../app.css';
+</script>
 
-    </div>
+	<div class="bg-pink-300">
+		<h1>Root layout</h1>
+		<div>
+		
+			<slot />
+		</div>
 
-    <footer>All rights reserved.</footer>
+		<footer>All rights reserved.</footer>
+	</div>
