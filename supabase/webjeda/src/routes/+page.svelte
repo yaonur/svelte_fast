@@ -1,42 +1,44 @@
-<script>
-	import  supabase  from '../config/supabase';
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+  console.log("client side pagedata>>>>")
+  console.log(data.session)
+	onMount(async () => {
+		const resp= await data.supabase.auth.getSession();
 
-  let email = 'ya_onur@hotmail.com';
-  let password="123123"
-	// your script goes here
-  async function signUp() {
-    let { data, error } = await supabase.auth.signUp({
-  email: email,
-  password: password
-})
-  console.log (data)
-  console.log(error)
-}
-	async function signInWithEmail() {
-    let resp = await supabase.auth.signInWithPassword({
-  email: email,
-  password: password
-})
-  console.log (resp.data)
-}
-const getTodos = async () => {
-  const { data, error } = await supabase
-    .from('todo')
-    .select('*')
-  console.log(data)
-  console.log(error)
-}
-const logUser=async ()=>{
-
-let { data, error } = await supabase.auth.getUser(email)
-console.log(data)
-
-}
+		if (resp.error) {
+			console.log(resp.error);
+		} else {
+      console.log("client side session>>>>")
+			console.log(resp.data);
+		}
+	});
+	const handleLogin = async () => {
+		const resp= await data.supabase.auth.signInWithPassword({
+			email: 'ya_onur@hotmail.com',
+			password: '123123'
+		});
+		if (resp.error) {
+			console.log(resp.error);
+		} else {
+			console.log('login success>>>>');
+			console.log(resp.data);
+		}
+	};
+  const handleShowTodos = async () => {
+    const resp= await data.supabase
+      .from('Todos')
+      .select('*')
+    if (resp.error) {
+      console.log(resp.error);
+    } else {
+      console.log('todos>>>>');
+      console.table(resp.data);
+    }
+  };
 </script>
 
-<input type="text" bind:value={email}>
-<input type="text" bind:value={password}>
-<button on:click={signInWithEmail}>Login</button>
-<button on:click={signUp}>SignUp</button>
-<button on:click={getTodos}>Get todos</button>
-<button on:click={logUser}>Log user</button>
+<div>Home</div>
+<button on:click={handleLogin}>Login</button>
+<button on:click={handleShowTodos}>Show todos</button>
