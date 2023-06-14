@@ -1,9 +1,14 @@
 import type { PageServerLoad } from './$types';
-export const load: PageServerLoad = async ({parent}) => {
+import { error } from '@sveltejs/kit';
+export const load: PageServerLoad = async ({parent,fetch}) => {
 	// console.log('Products Load function');
-	const parentData=await parent()
+	// const parentData=await parent()
 	// console.log(parentData)
-	const products = await (await import('$lib/dumy-products.json')).default;
-	return { products };
-	// return {products:[{id:1},{id:2},{id:3}]}
+	const response = await fetch('/api/products')
+	if (response.ok) {
+		const products = response.json()
+		return { products };
+	} 
+	const erorJSON = await response.json();
+	throw error(response.status, errorJSON.message)
 };
